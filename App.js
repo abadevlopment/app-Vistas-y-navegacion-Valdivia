@@ -1,10 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Header from './components/Header';
-import StartGameScreen from './screens/StartGameScreen'
+// import { StatusBar } from 'expo-status-bar';
+import { StyleSheet} from 'react-native';
+// import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
-import GameNavigator from './navigation/GameNavigator';
+import MainNavigator from './navigation/Index';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -17,7 +16,7 @@ export default function App() {
   return (
     // <View style={styles.container}>
     //   <Header title='RUEDA LOS DADOS' />
-      <GameNavigator/>
+      <MainNavigator/>
       // {/* <StartGameScreen/> */}
     //   <StatusBar style="auto" />
     // </View>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import GamerLogin from '../screens/GamerLogin'
@@ -10,13 +9,11 @@ const Stack = createNativeStackNavigator()
 
 const GameNavigator = () => {
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName='Registro' >
-                <Stack.Screen name='Registro' component={GamerLogin} />
-                <Stack.Screen name='Jugar' component={StartGameScreen} />
-                <Stack.Screen name='Despedida' component={Bye} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stack.Navigator initialRouteName='Registro' >
+            <Stack.Screen name='Registro' options={{ title: 'REGISTRATE' }} component={GamerLogin} />
+            <Stack.Screen name='Jugar' options={{ title: 'RUEDA LOS DADOS' }} component={StartGameScreen} />
+            <Stack.Screen name='Despedida' options={{ title: 'GRACIAS' }} component={Bye} />
+        </Stack.Navigator>
     )
 }
 

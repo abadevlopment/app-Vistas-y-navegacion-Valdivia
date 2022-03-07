@@ -3,27 +3,25 @@ import { Text, View, StyleSheet } from 'react-native'
 import Card from '../components/Card'
 import Buttons from '../components/Button'
 import Colors from '../constants/Colors'
-import NameInput from '../components/NameInput'
 
-const Bye = ({ navigation }) => {
-    const navegar = () => {
-        navigation.navigate('Registro')
-    }
 
+const Games = () => {
     return (
         <View style={styles.screen} >
             <Card style={styles.gameContainer} >
-                <Text style={styles.title2} >Gracias por jugar</Text>
+                <Text style={styles.title2} >JUEGO 1</Text>
             </Card>
             <Card style={styles.gameContainer} >
-                <Text style={styles.title2} >Puedes descargar más juegos en:</Text>
+                <Text style={styles.title2} >JUEGO 2</Text>
             </Card>
             <Card style={styles.gameContainer} >
-                <View style={styles.buttonContainer} >
-                    <Buttons style={styles.buttonGame} title='Volver a jugar' onPress={navegar} ></Buttons>
-                </View>
+                <Text style={styles.title2} >JUEGO 3</Text>
             </Card>
-        </View>)
+            <Card style={styles.gameContainer} >
+                <Text style={styles.title2} >JUEGO 4</Text>
+            </Card>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -81,4 +79,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default Bye
+export default Games
